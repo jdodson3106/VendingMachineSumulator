@@ -50,7 +50,6 @@ public class CreditorTest {
 
     @Test(expected = NotEnoughFundsException.class)
     public void cannotShopWithoutEnoughFunds() throws Exception {
-
         creditor.deduct(creditor.getAvailableFunds() + 10);
     }
 }
