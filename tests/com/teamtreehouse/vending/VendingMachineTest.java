@@ -35,4 +35,13 @@ public class VendingMachineTest {
 
         assertEquals("Twinkies", item.getName());
     }
+
+    @Test
+    public void runningSalesTotalIncrementsAfterAVend() throws Exception {
+        machine.addMoney(100);
+        machine.vend("A1");
+
+        assertEquals(75, machine.getRunningSalesTotal());
+
+    }
 }
